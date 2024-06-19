@@ -7,7 +7,7 @@ import Exercicios.Basico_01;
 public class Main {
 
 	public static void main(String[] args) {		
-		Basico_01 exercicio = new Basico_01();
+		Basico_01 basico_01 = new Basico_01();
 		
 		System.out.println("Olá! Escolha o exercício desejado: "
 				+ "\n -1 Saudações para usuário. "
@@ -28,34 +28,34 @@ public class Main {
 		
 		switch(exercicioEscolhido) {
 			case 1:
-				exercicio.exercicio_01();
+				basico_01.exercicio_01();
 				break;
 			case 2:
-				exercicio.exercicio_02();
+				basico_01.exercicio_02();
 				break;
 			case 3:
-				exercicio.exercicio_03();
+				basico_01.exercicio_03();
 				break;
 			case 4:
-				exercicio.exercicio_04();
+				basico_01.exercicio_04();
 				break;
 			case 5:
-				exercicio.exercicio_05();
+				basico_01.exercicio_05();
 				break;
 			case 6:
-				exercicio.exercicio_06();
+				basico_01.exercicio_06();
 				break;
 			case 7:
-				exercicio.exercicio_07();
+				basico_01.exercicio_07();
 				break;
 			case 8:
-				exercicio.exercicio_08();
+				basico_01.exercicio_08();
 				break;
 			case 9:
-				exercicio.exercicio_09();
+				basico_01.exercicio_09();
 				break;
 			case 10:
-				exercicio.exercicio_10();
+				basico_01.exercicio_10();
 				break;
 		}	
 		myObj.close();
