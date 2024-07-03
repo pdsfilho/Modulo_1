@@ -3,11 +3,14 @@ package primeiro_pacote;
 import java.util.Scanner;
 
 import Exercicios.Basico_01;
+import Exercicios.Condicionais;
 
 public class Main {
 
 	public static void main(String[] args) {		
 		Basico_01 basico_01 = new Basico_01();
+		
+		Condicionais condicionais = new Condicionais();
 		
 		System.out.println("Olá! Escolha o exercício desejado: "
 				+ "\n -1 Saudações para usuário. "
@@ -19,9 +22,10 @@ public class Main {
 				+ "\n -7 Cálculo de frete de uma mercadoria. "
 				+ "\n -8 Conversão real para dólar. "
 				+ "\n -9 Quantidade de litros de tinta necessária. "
-				+ "\n -10 Cálculo de cada parcela em uma compra. ");
+				+ "\n -10 Cálculo de cada parcela em uma compra. "
+				+ "\n -11 Cálculo de tipo de terreno. ");
 		
-		int exercicioEscolhido = 10;
+		int exercicioEscolhido = 11;
 		Scanner myObj = new Scanner(System.in);
 		
 		exercicioEscolhido = myObj.nextInt();
@@ -56,6 +60,9 @@ public class Main {
 				break;
 			case 10:
 				basico_01.exercicio_10();
+				break;
+			case 11:
+				condicionais.exercicio_03();
 				break;
 		}	
 		myObj.close();
