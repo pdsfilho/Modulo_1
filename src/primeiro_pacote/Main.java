@@ -23,9 +23,11 @@ public class Main {
 				+ "\n -8 Conversão real para dólar. "
 				+ "\n -9 Quantidade de litros de tinta necessária. "
 				+ "\n -10 Cálculo de cada parcela em uma compra. "
-				+ "\n -11 Cálculo de tipo de terreno. ");
+				+ "\n -11 Semáforo. "
+				+ "\n -12 Cálculo de tipo de terreno. ");
+				
 		
-		int exercicioEscolhido = 11;
+		int exercicioEscolhido = 12;
 		Scanner myObj = new Scanner(System.in);
 		
 		exercicioEscolhido = myObj.nextInt();
@@ -62,8 +64,10 @@ public class Main {
 				basico_01.exercicio_10();
 				break;
 			case 11:
-				condicionais.exercicio_03();
+				condicionais.exercicio_01();
 				break;
+			case 12:
+				condicionais.exercicio_03();
 		}	
 		myObj.close();
 	}
