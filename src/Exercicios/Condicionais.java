@@ -38,7 +38,10 @@ public class Condicionais {
 			
 			case 3:
 				estado = semaforo.VERDE;
-				break;		
+				break;
+			
+			default:
+				System.out.println("Semáforo Inativo.");
 		}
 		System.out.println(estado);
 		scan.close();
