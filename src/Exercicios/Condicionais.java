@@ -41,6 +41,7 @@ public class Condicionais {
 				break;		
 		}
 		System.out.println(estado);
+		scan.close();
 	}
 	
 	public void exercicio_03() {

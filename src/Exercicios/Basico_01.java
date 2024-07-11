@@ -15,7 +15,7 @@ public class Basico_01 {
 		
 		
 		System.out.println("Olá " + usuario + "! bem-vindo ao nosso programa!");
-		myObj.close();
+		////myObj.close();
 		
 	}
 	public void exercicio_02() {
@@ -31,7 +31,7 @@ public class Basico_01 {
 		resultado = v1+v2;
 		System.out.println("Resultado: " + resultado);
 		
-		myObj.close();
+		//myObj.close();
 	}
 	
 	public void exercicio_03() {
@@ -49,7 +49,7 @@ public class Basico_01 {
 		
 		vm = dm/t;
 		System.out.println("Velocidade média: "+ vm + "m/s");
-		myObj.close();
+		//myObj.close();
 	}
 	
 	public void exercicio_04() {
@@ -67,7 +67,7 @@ public class Basico_01 {
 		salarioBruto = ht * vh;
 		
 		System.out.println("O Salário bruto é de: \n" + "R$ "+ salarioBruto);
-		myObj.close();
+		//myObj.close();
 	}
 	
 	public void exercicio_05() {
@@ -95,7 +95,7 @@ public class Basico_01 {
 		valorParcelaMensal = valorTotal / numeroMeses;
 		
 		System.out.println("O valor da parcela mensal é: \n" + "R$ " + valorParcelaMensal);
-		myObj.close();
+		//myObj.close();
 	}
 	public void exercicio_06() {
 		double qtdLitrosMes, valorConta;
@@ -111,7 +111,7 @@ public class Basico_01 {
 		valorConta = qtdLitrosMes * taxa;
 		
 		System.out.println("R$ " + valorConta);
-		myObj.close();
+		//myObj.close();
 	}
 	public void exercicio_07() {
 		
@@ -128,7 +128,7 @@ public class Basico_01 {
 		valorFrete = qtdPeso * taxa;
 		
 		System.out.println("R$ " + valorFrete);
-		myObj.close();
+		//myObj.close();
 	}
 	
 	public void exercicio_08() {
@@ -148,7 +148,7 @@ public class Basico_01 {
 		valorDolar = valorReal * cotacao;
 		
 		System.out.println("$ " + valorDolar);
-		myObj.close();
+		//myObj.close();
 	}
 	
 	public void exercicio_09() {
@@ -169,7 +169,7 @@ public class Basico_01 {
 		litrosTotais = 2 * area;
 		
 		System.out.println(litrosTotais + " litros para pintar uma área de " + area + "m²");
-		myObj.close();
+		//myObj.close();
 	}
 	
 	public void exercicio_10() {
@@ -197,6 +197,6 @@ public class Basico_01 {
 		System.out.println(" O valor dos juros é:  " + "R$ " + juros 
 				+ "\n O valor da parcela mensal é: "+ "R$ " + valorParcela
 				+ "\n O valor total é: R$ " + valorTotal);
-		myObj.close();
+		//myObj.close();
 	}
 }
