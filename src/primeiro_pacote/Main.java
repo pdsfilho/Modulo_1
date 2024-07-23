@@ -3,6 +3,7 @@ package primeiro_pacote;
 import java.util.Scanner;
 
 import Exercicios.Basico_01;
+import Exercicios.Basico_02;
 import Exercicios.Condicionais;
 import Exercicios.Repeticao;
 
@@ -10,6 +11,8 @@ public class Main {
 
 	public static void main(String[] args) {		
 		Basico_01 basico_01 = new Basico_01();
+		
+		Basico_02 basico_02 = new Basico_02();
 		
 		Condicionais condicionais = new Condicionais();
 		
@@ -33,7 +36,9 @@ public class Main {
 					+ "\n -12 Cálculo de tipo de terreno. "
 					+ "\n -13 Repetição de nomes. "
 					+ "\n -14 Sorteiro de número. "
-					+ "\n -15 inserção de nomes numa lista. "
+					+ "\n -15 Inserção de nomes numa lista."
+					+ "\n -16 Cálculo de multa de velocidade "
+					+ "\n -17 Cálculo de IMC."
 					+ "\n -0 Sair. ");
 					
 			
@@ -87,6 +92,12 @@ public class Main {
 					break;
 				case 15:
 					repeticao.escolheNomes();
+					break;
+				case 16:
+					condicionais.aplicaMulta();
+					break;
+				case 17:
+					basico_02.calculoImc();
 					break;
 				
 				default:

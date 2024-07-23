@@ -85,4 +85,23 @@ public class Condicionais {
 		
 		myObj.close();
 	}
+
+	public void aplicaMulta() {
+		int excedente;
+		final int taxa = 5;
+		final int velocidadeLimite = 80;
+		
+		System.out.println("Informe a velocidade do veículo: \n");
+		Scanner scan = new Scanner(System.in);
+		
+		excedente = scan.nextInt();
+		if(excedente > velocidadeLimite) {
+			int multa = (excedente - velocidadeLimite) * taxa;
+			System.out.printf("Multa de R$ %d" , multa);
+		}
+		else {
+			System.out.println("Sem multa. \n");
+		}
+
+	}
 }
