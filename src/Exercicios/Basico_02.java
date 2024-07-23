@@ -29,7 +29,7 @@ public class Basico_02 {
 		
 		double imc = peso / (altura * altura);
 		
-		System.out.println("IMC: \n" + imc);
+		System.out.printf("IMC: %.2f \n", imc);
 		
 		if(imc < 18.5) {
 			System.out.println("Classificação do peso: " + estadoPeso.ABAIXO);

@@ -106,7 +106,7 @@ public class Main {
 					 
 			}
 			//scan.close();
-			//scan.reset();
+			scan.reset();
 		}while(opcao == true);
 	}
 }
