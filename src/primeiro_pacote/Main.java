@@ -39,6 +39,7 @@ public class Main {
 					+ "\n -15 Inserção de nomes numa lista."
 					+ "\n -16 Cálculo de multa de velocidade "
 					+ "\n -17 Cálculo de IMC."
+					+ "\n -18 Aluguel de Carros."
 					+ "\n -0 Sair. ");
 					
 			
@@ -98,6 +99,9 @@ public class Main {
 					break;
 				case 17:
 					basico_02.calculoImc();
+					break;
+				case 18:
+					condicionais.alugaCarro();
 					break;
 				
 				default:
