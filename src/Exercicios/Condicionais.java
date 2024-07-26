@@ -1,5 +1,7 @@
 package Exercicios;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Condicionais {
@@ -108,56 +110,68 @@ public class Condicionais {
 	public void alugaCarro() {
 		
 		double kmPercorridos, valorTotal = 0, valorKm = 0;
-		int dias = 0, carroEscolhido;
+		int dias = 0, carroEscolhido = 9;
 		
 		final double valorDiariaP = 90;
 		final double valorDiariaL = 150;
 		double valorDiariaTotal = 0;
 		
-		System.out.println("Cálculo de aluguel de carros. \n "
-				+ "Digite o tipo de carro escolhido: \n"
-				+ "1: Popular \n"
-				+ "2: Luxo. \n");
+		List<Double> listaAluguel = new ArrayList<Double>();
 		
-		Scanner scan = new Scanner(System.in);
-		carroEscolhido = scan.nextInt();
-		
-		System.out.println("Quantos dias de uso? ");
-		dias = scan.nextInt();
-	
-		System.out.println("Quantos KMs percorridos? ");
-		Scanner scan2 = new Scanner(System.in);
-		kmPercorridos = scan2.nextDouble();
-		
-		if(carroEscolhido == 1) {
-			if (kmPercorridos > 0 && kmPercorridos <=100) {
-				valorKm = 0.20;	
-			}
-			else if (kmPercorridos > 100 )  {
-				valorKm = 0.10;
-			}
-			else {
-				System.out.println("Valor Inválido");
-			}
-			valorDiariaTotal = valorDiariaP * dias;
-		}
-		else if (carroEscolhido == 2) {
-			if (kmPercorridos > 0 && kmPercorridos <=100) {
-				valorKm = 0.30;		
-			}
-			else if (kmPercorridos > 100 ) {
-				valorKm = 0.25;			
-			}
-			else {
-				System.out.println("Valor Inválido");
-			}
+		while (carroEscolhido != 0) {
+			System.out.println("Cálculo de aluguel de carros. \n " + "Digite o tipo de carro escolhido: \n"
+					+ " 1: Popular "
+					+ "\n 2: Luxo. "
+					+ "\n 0: Sair ");
 			
-			valorDiariaTotal = valorDiariaL * dias;
+			Scanner scan = new Scanner(System.in);
+			
+			carroEscolhido = scan.nextInt();
+			
+			if(carroEscolhido == 1 || carroEscolhido == 2) {
+				
+				System.out.println("Quantos dias de uso? ");
+				dias = scan.nextInt();
+				
+				System.out.println("Quantos KMs percorridos? ");
+				Scanner scan2 = new Scanner(System.in);
+				
+				kmPercorridos = scan2.nextDouble();
+				if (carroEscolhido == 1) {
+					if (kmPercorridos > 0 && kmPercorridos <= 100) {
+						valorKm = 0.20;
+					} else if (kmPercorridos > 100) {
+						valorKm = 0.10;
+					} else {
+						System.out.println("Valor Inválido");
+					}
+					valorDiariaTotal = valorDiariaP * dias;
+					
+					
+				} else if (carroEscolhido == 2) {
+					if (kmPercorridos > 0 && kmPercorridos <= 100) {
+						valorKm = 0.30;
+					} else if (kmPercorridos > 100) {
+						valorKm = 0.25;
+					} else {
+						System.out.println("Valor Inválido");
+					}
+	
+					valorDiariaTotal = valorDiariaL * dias;
+				} 
+			}
+			else {
+				System.out.println("Até Logo!");
+				break;
+			}
+				valorTotal = (kmPercorridos * valorKm) + valorDiariaTotal;
+				listaAluguel.add(valorTotal);
+				System.out.println("Lista de Alugueis: " + listaAluguel);
+				
+				double totalevent = listaAluguel.stream().mapToDouble(f -> f.doubleValue()).sum();
+				System.out.println("Soma dos Alugueis: R$" + totalevent + "\n");
+			}
+		
 		}
-		else {
-			System.out.println("Valor Inválido. Escolha um carro entre 1 ou 2.");
-		}
-		valorTotal = (kmPercorridos * valorKm) + valorDiariaTotal ;
-		System.out.println("Valor total do aluguel é de: " + valorTotal);
-	}
 }
+

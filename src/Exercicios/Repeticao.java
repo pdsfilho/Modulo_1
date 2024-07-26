@@ -1,6 +1,7 @@
 package Exercicios;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -46,14 +47,15 @@ public class Repeticao {
 
 	}
 	public void escolheNomes() {
-		ArrayList<String> nomes = new ArrayList<String>();
+		List<String> nomes = new ArrayList<String>();
 		Scanner scan = new Scanner(System.in);
 		String opcao = "s";
 		
 		do {
 			System.out.println("Informe um nome: \n");
-					
-			nomes.add(scan.nextLine());
+			
+			String nome = scan.nextLine();
+			nomes.add(nome);
 			
 			System.out.println("Deseja adicionar outro nome (S/N)?");
 			opcao = scan.nextLine();
