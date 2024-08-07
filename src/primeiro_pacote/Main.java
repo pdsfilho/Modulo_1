@@ -5,6 +5,7 @@ import java.util.Scanner;
 import Exercicios.Basico_01;
 import Exercicios.Basico_02;
 import Exercicios.Condicionais;
+import Exercicios.Listas;
 import Exercicios.Repeticao;
 
 public class Main {
@@ -17,6 +18,8 @@ public class Main {
 		Condicionais condicionais = new Condicionais();
 		
 		Repeticao repeticao = new Repeticao();
+		
+		Listas listas = new Listas();
 		
 		boolean opcao = true;
 		
@@ -40,6 +43,7 @@ public class Main {
 					+ "\n -16 Cálculo de multa de velocidade "
 					+ "\n -17 Cálculo de IMC."
 					+ "\n -18 Aluguel de Carros."
+					+ "\n -19 Lista com Números Aleatórios."
 					+ "\n -0 Sair. ");
 					
 			
@@ -103,7 +107,8 @@ public class Main {
 				case 18:
 					condicionais.alugaCarro();
 					break;
-				
+				case 19:
+					listas.listaAleatoria();
 				default:
 					System.out.println("Até Logo!");
 					 opcao = false;
